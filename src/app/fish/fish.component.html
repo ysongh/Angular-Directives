@@ -1,0 +1,16 @@
+<p>Fish Message</p>
+
+<button
+    class="btn btn-primary"
+    (click)="showMessage()">
+        {{ message }} Details
+</button>
+
+<ol *ngIf="isShow;">
+    <li
+        *ngFor="let fishMessage of fishMessages"
+        [ngStyle]="{backgroundColor: getColor()}"
+        [ngClass]="{changeWhite: fishMessages.length >= 5}">
+            {{ fishMessage }}
+    </li>
+</ol>
