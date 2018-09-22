@@ -6,11 +6,11 @@
         {{ message }} Details
 </button>
 
-<ol *ngIf="isShow;">
-    <li
-        *ngFor="let fishMessage of fishMessages"
-        [ngStyle]="{backgroundColor: getColor()}"
-        [ngClass]="{changeWhite: fishMessages.length >= 5}">
-            {{ fishMessage }}
-    </li>
-</ol>
+<p *ngIf="isShow">{{ fishMessage }}</p>
+
+<div
+    *ngFor="let fishMessage of fishMessages"
+    [ngStyle]="{backgroundColor: fishMessage >= 5 ? 'blue' : 'null'}"
+    [ngClass]="{changeWhite: fishMessage >= 5}">
+        {{ fishMessage }}
+</div>

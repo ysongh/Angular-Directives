@@ -18,16 +18,12 @@ export class FishComponent{
     showMessage(){
         if(this.isShow === false){
             this.isShow = true;
-            this.fishMessages.push(this.fishMessage);
+            this.fishMessages.push(this.fishMessages.length + 1);
             this.message = "Hide";
         }
         else{
             this.isShow = false;
             this.message = "Display";
         }
-    }
-    
-    getColor(){
-        return this.fishMessages.length >= 5 ? 'blue' : null;
     }
 }
