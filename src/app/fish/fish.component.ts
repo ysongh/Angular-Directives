@@ -18,7 +18,8 @@ export class FishComponent{
     showMessage(){
         if(this.isShow === false){
             this.isShow = true;
-            this.fishMessages.push(this.fishMessages.length + 1);
+            //this.fishMessages.push(this.fishMessages.length + 1);
+            this.fishMessages.push(new Date());
             this.message = "Hide";
         }
         else{

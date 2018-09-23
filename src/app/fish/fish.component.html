@@ -9,8 +9,8 @@
 <p *ngIf="isShow">{{ fishMessage }}</p>
 
 <div
-    *ngFor="let fishMessage of fishMessages"
-    [ngStyle]="{backgroundColor: fishMessage >= 5 ? 'blue' : 'null'}"
-    [ngClass]="{changeWhite: fishMessage >= 5}">
+    *ngFor="let fishMessage of fishMessages; let i = index"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'null'}"
+    [ngClass]="{changeWhite: i >= 4}">
         {{ fishMessage }}
 </div>
